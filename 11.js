@@ -10,20 +10,12 @@ let isAnagram = (str1, str2) => {
     let one = [],
     two = [],
     counter = 0;
-
     for (let i=0; i < str1.length; i++) {
       one.push(str1[i]);
-    }
+    };
     for (let i=0; i < str2.length; i++) {
       two.push(str2[i]);
-    }
-
-    // for (let letter of one) {
-    //   if (two.includes(letter)) {
-    //     counter++;
-    //   }
-    // }
-
+    };
     for (let letter of one) {
       let i = 0
       while (i < two.length) {
@@ -33,17 +25,15 @@ let isAnagram = (str1, str2) => {
         }
         i++;
       }
-    }
-
+    };
     if (str1.length === counter) {
       return true;
     }
     else {
       return false;
-    }
-  }
-
-}
+    };
+  };
+};
 
 console.log(isAnagram('dog', 'god')); // true
 console.log(isAnagram('dog', 'godo')); // false
