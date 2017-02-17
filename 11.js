@@ -18,9 +18,20 @@ let isAnagram = (str1, str2) => {
       two.push(str2[i]);
     }
 
+    // for (let letter of one) {
+    //   if (two.includes(letter)) {
+    //     counter++;
+    //   }
+    // }
+
     for (let letter of one) {
-      if (two.includes(letter)) {
-        counter++;
+      let i = 0
+      while (i < two.length) {
+        if (letter === two[i]) {
+          counter++;
+          break
+        }
+        i++;
       }
     }
 
